@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    min-height: 100vh;
+    padding: 38px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #3245f5, 25%, rgb(18, 197, 197) 100%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 21px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.wrapper .container1,
+.wrapper .container2 {
+    background-color: #f5f5f5;
+    width: 350px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.wrapper .container1 .title {
+    color: #f5f5f5;
+    background-color: #444;
+    line-height: 65px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 12px 12px 0 0;
+}
+
+.wrapper .container1 .box {
+    padding: 10px;
+}
+
+.wrapper .container1 .box label {
+    display: flex;
+    height: 53px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    margin: 10px 0;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wrapper .container1 .box label .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+
+.wrapper .container1 .box label .dot::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(2);
+    border-radius: 50%;
+}
+
+#option-1:checked ~ .option-1 .dot::before,
+#option-2:checked ~ .option-2 .dot::before,
+#option-3:checked ~ .option-3 .dot::before,
+#option-4:checked ~ .option-4 .dot::before {
+    background-color: #444;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.wrapper .container1 .box label .text {
+    color: #444;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    transition: color 0.3s ease;
+}
+
+#option-1:checked ~ .option-1,
+#option-2:checked ~ .option-2,
+#option-3:checked ~ .option-3,
+#option-4:checked ~ .option-4 {
+    background-color: #444;
+    border-color: #444;
+}
+
+#option-1:checked ~ .option-1 .text,
+#option-2:checked ~ .option-2 .text,
+#option-3:checked ~ .option-3 .text,
+#option-4:checked ~ .option-4 .text {
+    color: #f5f5f5;
+}
+
+.wrapper .container1 .box input[type="radio"] {
+    display: none;
+}
+
+.wrapper .container2 {
+    padding: 18px 14px;
+}
+
+.wrapper .container2 .title {
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #414141;
+    margin-bottom: 18px;
+}
+
+.wrapper .container2 .content {
+    margin-top: 10px;
+}
+
+.wrapper .container2 label.box {
+    background-color: #ddd;
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid lightgray;
+    transform: all 0.2s ease;
+}
+
+#one:checked ~ label.box.first,
+#two:checked ~ label.box.second,
+#three:checked ~ label.box.third,
+#four:checked ~ label.box.fourth {
+    border-color: #D588F7;
+}
+
+.wrapper .container2 label.box:hover {
+    background-color: #D588F7;
+}
+
+.wrapper .container2 label.box .course {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.wrapper .container2 label.box .circle {
+    height: 20px;
+    width: 20px;
+    background-color: #f5f5f5;
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    border: 5px solid transparent;
+    box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#one:checked ~ label.first .circle,
+#two:checked ~ label.second .circle,
+#three:checked ~ label.third .circle,
+#four:checked ~ label.fourth .circle {
+    border-color: #8D58E7;
+    background-color: #f5f5f5;
+}
+
+.wrapper .container2 .content input[type="radio"] {
+    display: none;
+}
